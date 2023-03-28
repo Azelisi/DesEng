@@ -9,10 +9,9 @@ export default function App() {
       <ImageBackground source={require('./assets/startImg.png')} resizeMode="cover" style={styles.image}>
         <Text style={styles.startText}>Станьте частью {"\n"}
           DesEng! </Text>
-        <Button style={styles.startButton}
-          title="Продолжить"
-          color="#FF6014"
-        />
+        <TouchableOpacity style={styles.appButtonContainer}>
+          <Text style={styles.appButtonText}>Продолжить </Text>
+        </TouchableOpacity>
       </ImageBackground>
       <StatusBar style="auto" />
     </View>
@@ -36,10 +35,15 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 28,
   },
-  startButton: {
-    borderTopLeftRadius: 5,
-    borderTopRightRadius: 5,
-    borderBottomLeftRadius: 5,
-    borderBottomRightRadius: 5,
-  },
+  appButtonText: {
+    elevation: 8,
+    backgroundColor: "#FF6014",
+    borderRadius: 10,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    fontSize: 18,
+    color: "#fff",
+    fontWeight: "medium",
+    alignSelf: "center",
+  }
 });
