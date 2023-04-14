@@ -6,7 +6,7 @@ import { StyleSheet, TouchableOpacity, ImageBackground, Text, View } from 'react
 export default function Cool({ navigation }) {
     return (
         <View style={styles.container}>
-            <ImageBackground source={require('../assets/startImg.png')} resizeMode="cover" style={styles.image}>
+            <ImageBackground source={require('../assets/finalReg.png')} resizeMode="cover" style={styles.image}>
                 <Text style={styles.startText}>Поздравляем! Вы прошли регистрацию!</Text>
 
                 <TouchableOpacity onPress={() => navigation.navigate('В разработке')} style={styles.appButtonContainer}>
