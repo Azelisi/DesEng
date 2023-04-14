@@ -1,7 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import StartPages from './pages/StartPages';
 import Registr from './pages/Registr';
+import NotFound from './pages/NotFound';
+import Midis from './pages/Midis';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -13,8 +14,9 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Начальный экран" component={StartPages} />
         <Stack.Screen name="Регистрация в DesEng" component={Registr} />
-        <Stack.Screen name="Портал МИДиС" component={Registr} />
+        <Stack.Screen name="Портал МИДиС" component={Midis} />
         <Stack.Screen name="Вход в приложение" component={Registr} />
+        <Stack.Screen name="В разработке" component={NotFound} />
       </Stack.Navigator>
     </NavigationContainer>
   );

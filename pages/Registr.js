@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import ButtonComponent from '../components/ButtonCustom'
 
 export default function Registr({ navigation }) {
     return (
@@ -7,11 +8,8 @@ export default function Registr({ navigation }) {
             <View style={styles.textContainer}>
                 <Text style={styles.headerText}>Зарегистрируйтесь в приложении, {"\n"} это нужно для сохранения вашего аккаунта в системе МИДиС</Text>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Портал МИДиС')} style={styles.portalButton}>
-                <Image source={require('../assets/homemidis.png')} style={styles.portalIcon} />
-                <Text style={styles.portalButtonText}>Войти через портал МИДиС</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Вход в приложение')} style={styles.signInButton}>
+            <ButtonComponent text="Войти через портал МИДиС" path="Портал МИДиС" navigation={navigation} />
+            <TouchableOpacity onPress={() => navigation.navigate('В разработке')} style={styles.signInButton}>
                 <Text style={styles.signInButtonText}>У меня уже есть аккаунт  </Text>
             </TouchableOpacity>
         </View>
@@ -40,8 +38,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#FF6014',
         borderRadius: 6,
-        width: 380,
-        height: 44,
+        width: 330,
+        height: 50,
         marginBottom: 26,
         top: 200,
     },
@@ -57,12 +55,11 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
     },
     signInButton: {
-        backgroundColor: 'transparent',
-        marginBottom: 15,
-    },
-    signInButtonText: {
         color: 'white',
         fontSize: 14,
         top: 200,
+    },
+    signInButtonText: {
+        color: 'white'
     },
 });

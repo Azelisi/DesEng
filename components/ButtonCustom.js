@@ -1,38 +1,60 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, TouchableOpacity, ImageBackground, Text, View } from 'react-native';
 
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-
-export default function ButtonCustom() {
+const ButtonComponent = ({ text, path, navigation }) => {
     return (
-        <View style={styles.container}>
-            <TouchableOpacity style={styles.appButtonContainer}>
-                <Text style={styles.appButtonText}>Продолжить </Text>
-            </TouchableOpacity>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate(path)} style={styles.portalButton}>
+            <Text style={styles.portalButtonText}>{text}</Text>
+        </TouchableOpacity>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
+        backgroundColor: '#616161',
         alignItems: 'center',
     },
-    startText: {
+    textContainer: {
+        marginTop: 100,
+        marginBottom: 50,
+    },
+    headerText: {
+        textAlign: 'center',
         color: 'white',
         fontSize: 28,
+        fontFamily: 'Roboto',
     },
-    appButtonText: {
-        elevation: 8,
-        backgroundColor: "#FF6014",
-        borderRadius: 10,
-        paddingVertical: 16,
-        paddingHorizontal: 20,
-        fontSize: 18,
-        color: "#fff",
-        fontWeight: "medium",
-        alignSelf: "center",
-    }
+    portalButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#FF6014',
+        borderRadius: 6,
+        width: 330,
+        height: 50,
+        marginBottom: 26,
+        top: 200,
+    },
+    portalIcon: {
+        width: 24,
+        height: 24,
+        marginRight: 10,
+    },
+    portalButtonText: {
+        color: 'white',
+        fontSize: 14,
+        fontWeight: 'medium',
+        fontFamily: 'Roboto',
+    },
+    signInButton: {
+        backgroundColor: 'transparent',
+        marginBottom: 15,
+    },
+    signInButtonText: {
+        color: 'white',
+        fontSize: 14,
+        top: 200,
+    },
 });
+export default ButtonComponent;
