@@ -7,6 +7,7 @@ import Direction from './pages/Direction';
 import Categories from './pages/Categories';
 import Degree from './pages/Degree';
 import Test from './pages/Testing';
+import Cool from './pages/Cool';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name="Категории" component={Categories} />
         <Stack.Screen name="Уровень подготовки" component={Degree} />
         <Stack.Screen name="Тестирование" component={Test} />
+        <Stack.Screen name="Завершение регистрации" component={Cool} />
         <Stack.Screen name="В разработке" component={NotFound} />
       </Stack.Navigator>
     </NavigationContainer>

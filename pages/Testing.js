@@ -7,6 +7,29 @@ const Test = ({ navigation }) => {
     const onSelectAnswer = (selectedAnswer) => {
         setAnswer(selectedAnswer);
     };
+    const sendAnswer = () => {
+        fetch('https://linktr.ee/Azelisi', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                answer: answer,
+            }),
+        })
+            .then(response => {
+                if (response.ok) {
+                    // Данные успешно отправлены на сервер
+                    navigation.navigate('В разработке');
+                    console.log(answer);
+                } else {
+                    throw new Error('Ошибка отправки данных');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    };
 
     const renderOption = (option) => {
         const backgroundColor = answer === option ? '#1E1E1E' : '#545454';
@@ -33,10 +56,11 @@ const Test = ({ navigation }) => {
             </View>
             <TouchableOpacity
                 style={[styles.button, answer ? styles.buttonActive : null]}
-                disabled={!answer}>
+                disabled={!answer}
+                onPress={sendAnswer}>
                 <Text style={styles.buttonText}>Продолжить </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.skipButton}>
+            <TouchableOpacity style={styles.skipButton} onPress={() => navigation.navigate('Завершение регистрации')}>
                 <Text style={styles.skipButtonText}>Пропустить </Text>
             </TouchableOpacity>
         </View>
