@@ -26,7 +26,7 @@ const Categories = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>На каком направлении вы обучаетесь? </Text>
+            <Text style={styles.title}>Выберите наиболее интересующие вас категории для Графического дизайна </Text>
             <TouchableOpacity
                 style={[
                     styles.directionButton,
@@ -94,9 +94,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#1E1E1E',
     },
     title: {
-        fontSize: 28,
+        fontSize: 25,
         fontWeight: 'bold',
         marginBottom: 30,
+        marginLeft: 20,
         color: '#E0E0E0',
     },
     directionButton: {
