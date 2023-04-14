@@ -3,6 +3,9 @@ import StartPages from './pages/StartPages';
 import Registr from './pages/Registr';
 import NotFound from './pages/NotFound';
 import Midis from './pages/Midis';
+import Direction from './pages/Direction';
+import Categories from './pages/Categories';
+import Degree from './pages/Degree';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -16,6 +19,9 @@ export default function App() {
         <Stack.Screen name="Регистрация в DesEng" component={Registr} />
         <Stack.Screen name="Портал МИДиС" component={Midis} />
         <Stack.Screen name="Вход в приложение" component={Registr} />
+        <Stack.Screen name="Направление" component={Direction} />
+        <Stack.Screen name="Категории" component={Categories} />
+        <Stack.Screen name="Уровень подготовки" component={Degree} />
         <Stack.Screen name="В разработке" component={NotFound} />
       </Stack.Navigator>
     </NavigationContainer>

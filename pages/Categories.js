@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
 
 
-const Direction = ({ navigation }) => {
+const Categories = ({ navigation }) => {
     const [selectedDirections, setSelectedDirections] = useState([]);
 
     const handleDirectionSelect = (direction) => {
@@ -19,7 +19,7 @@ const Direction = ({ navigation }) => {
     const handleContinue = () => {
         // отправка выбранных направлений на бекенд
         console.log({ selectedDirections });
-        navigation.navigate('Категории');
+        navigation.navigate('Уровень подготовки');
     };
     // проверка на количество выбранных направлений
     const disableContinueButton = selectedDirections.length === 0;
@@ -30,47 +30,47 @@ const Direction = ({ navigation }) => {
             <TouchableOpacity
                 style={[
                     styles.directionButton,
-                    selectedDirections.includes('3D графика') && styles.selectedDirectionButton,
+                    selectedDirections.includes('Композиция') && styles.selectedDirectionButton,
                 ]}
-                onPress={() => handleDirectionSelect('3D графика')}
+                onPress={() => handleDirectionSelect('Композиция')}
             >
-                <Text style={styles.directionButtonText}>3D графика </Text>
+                <Text style={styles.directionButtonText}>Композиция </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={[
                     styles.directionButton,
-                    selectedDirections.includes('Графический дизайн') && styles.selectedDirectionButton,
+                    selectedDirections.includes('Колористика') && styles.selectedDirectionButton,
                 ]}
-                onPress={() => handleDirectionSelect('Графический дизайн')}
+                onPress={() => handleDirectionSelect('Колористика')}
             >
-                <Text style={styles.directionButtonText}>Графический дизайн </Text>
+                <Text style={styles.directionButtonText}>Колористика </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={[
                     styles.directionButton,
-                    selectedDirections.includes('Интерьер') && styles.selectedDirectionButton,
+                    selectedDirections.includes('Орнамент') && styles.selectedDirectionButton,
                 ]}
-                onPress={() => handleDirectionSelect('Интерьер')}
+                onPress={() => handleDirectionSelect('Орнамент')}
             >
-                <Text style={styles.directionButtonText}>Интерьер </Text>
+                <Text style={styles.directionButtonText}>Орнамент </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={[
                     styles.directionButton,
-                    selectedDirections.includes('Костюм') && styles.selectedDirectionButton,
+                    selectedDirections.includes('Полиграфия') && styles.selectedDirectionButton,
                 ]}
-                onPress={() => handleDirectionSelect('Костюм')}
+                onPress={() => handleDirectionSelect('Полиграфия')}
             >
-                <Text style={styles.directionButtonText}>Костюм </Text>
+                <Text style={styles.directionButtonText}>Полиграфия </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={[
                     styles.directionButton,
-                    selectedDirections.includes('UI/UX дизайн') && styles.selectedDirectionButton,
+                    selectedDirections.includes('Типография') && styles.selectedDirectionButton,
                 ]}
-                onPress={() => handleDirectionSelect('UI/UX дизайн')}
+                onPress={() => handleDirectionSelect('Типография')}
             >
-                <Text style={styles.directionButtonText}>UI/UX дизайн </Text>
+                <Text style={styles.directionButtonText}>Типография </Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={[
@@ -135,4 +135,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Direction;
+export default Categories;

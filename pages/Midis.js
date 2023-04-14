@@ -34,13 +34,13 @@ const Midis = ({ navigation }) => {
                 style={[styles.button, { opacity: isButtonDisabled ? 0.5 : 1 }]}
                 onPress={() => {
                     handleLogin();
-                    navigation.navigate("В разработке")
+                    navigation.navigate("Направление")
                 }}
                 disabled={isButtonDisabled}
             >
                 <Text style={styles.buttonText}>Продолжить  </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('В разработке')} style={styles.signInButton}>
+            <TouchableOpacity onPress={() => navigation.navigate('Направление')} style={styles.signInButton}>
                 <Text style={styles.signInButtonText}>Я не помню пароль </Text>
             </TouchableOpacity>
         </View>
