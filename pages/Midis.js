@@ -40,9 +40,6 @@ const Midis = ({ navigation }) => {
             >
                 <Text style={styles.buttonText}>Продолжить  </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Направление')} style={styles.signInButton}>
-                <Text style={styles.signInButtonText}>Я не помню пароль </Text>
-            </TouchableOpacity>
         </View>
     );
 };
@@ -69,14 +66,6 @@ const styles = StyleSheet.create({
         fontWeight: 'medium',
         fontFamily: 'Roboto',
     },
-    signInButton: {
-        color: 'white',
-        fontSize: 14,
-        top: 300,
-    },
-    signInButtonText: {
-        color: 'white'
-    },
     input: {
         width: '90%',
         height: 50,
@@ -97,7 +86,7 @@ const styles = StyleSheet.create({
         width: 330,
         height: 50,
         marginBottom: 26,
-        top: 300,
+        top: 350,
     },
     buttonText: {
         fontSize: 16,

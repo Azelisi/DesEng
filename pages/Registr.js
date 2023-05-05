@@ -9,7 +9,7 @@ export default function Registr({ navigation }) {
                 <Text style={styles.headerText}>Зарегистрируйтесь в приложении, {"\n"} это нужно для сохранения вашего аккаунта в системе МИДиС</Text>
             </View>
             <ButtonComponent text="Войти через портал МИДиС" path="Портал МИДиС" navigation={navigation} />
-            <TouchableOpacity onPress={() => navigation.navigate('В разработке')} style={styles.signInButton}>
+            <TouchableOpacity onPress={() => navigation.navigate('Портал МИДиС')} style={styles.signInButton}>
                 <Text style={styles.signInButtonText}>У меня уже есть аккаунт  </Text>
             </TouchableOpacity>
         </View>
