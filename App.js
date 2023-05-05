@@ -1,4 +1,5 @@
 import { StyleSheet, View } from 'react-native';
+import Navigation from './nav/Navigation';
 import StartPages from './pages/StartPages';
 import Registr from './pages/Registr';
 import NotFound from './pages/NotFound';
@@ -17,19 +18,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Начальный экран" component={StartPages} />
-        <Stack.Screen name="Регистрация в DesEng" component={Registr} />
-        <Stack.Screen name="Портал МИДиС" component={Midis} />
-        <Stack.Screen name="Вход в приложение" component={Registr} />
-        <Stack.Screen name="Направление" component={Direction} />
-        <Stack.Screen name="Категории" component={Categories} />
-        <Stack.Screen name="Уровень подготовки" component={Degree} />
-        <Stack.Screen name="Тестирование" component={Test} />
-        <Stack.Screen name="Завершение регистрации" component={Cool} />
-        <Stack.Screen name="Профиль" component={Profile} />
-        <Stack.Screen name="В разработке" component={NotFound} />
-      </Stack.Navigator>
+      <Navigation />
     </NavigationContainer>
   );
 }
