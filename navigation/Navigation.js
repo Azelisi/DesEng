@@ -16,7 +16,12 @@ const Stack = createNativeStackNavigator();
 
 export default function Navigation() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{
+            headerMode: 'screen',
+            headerTintColor: 'white',
+            headerStyle: { backgroundColor: '#616161' },
+        }}
+        >
             <Stack.Screen name="Начальный экран" component={StartPages} />
             <Stack.Screen name="Регистрация в DesEng" component={Registr} />
             <Stack.Screen name="Портал МИДиС" component={Midis} />
@@ -35,6 +40,6 @@ export default function Navigation() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#616161',
     },
 });
