@@ -11,10 +11,8 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
         <Navigation />
         <StatusBar style='light' />
-      </NavigationContainer>
     </SafeAreaProvider>
   );
 };

@@ -6,7 +6,7 @@ import { StyleSheet, TouchableOpacity, ImageBackground, Text, View } from 'react
 export default function StartPages({ navigation }) {
   return (
     <View style={styles.container}>
-      <ImageBackground source={require('../assets/startImg.png')} resizeMode="cover" style={styles.image}>
+      <ImageBackground source={require('../../../assets/startImg.png')} resizeMode="cover" style={styles.image}>
         <Text style={styles.startText}>Станьте частью {"\n"}
           DesEng! </Text>
 

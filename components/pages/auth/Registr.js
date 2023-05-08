@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import ButtonComponent from '../components/ButtonCustom'
+import ButtonComponent from '../../ButtonCustom'
 
 export default function Registr({ navigation }) {
     return (
