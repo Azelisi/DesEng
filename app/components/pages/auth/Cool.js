@@ -9,7 +9,7 @@ export default function Cool({ navigation }) {
             <ImageBackground source={require('../../../assets/finalReg.png')} resizeMode="cover" style={styles.image}>
                 <Text style={styles.startText}>Поздравляем! Вы прошли регистрацию!</Text>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Профиль')} style={styles.appButtonContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate('Основная')} style={styles.appButtonContainer}>
                     <Text style={styles.appButtonText}>Продолжить </Text>
                 </TouchableOpacity>
                 <StatusBar />
