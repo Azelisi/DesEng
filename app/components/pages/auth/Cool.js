@@ -1,15 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, TouchableOpacity, ImageBackground, Text, View } from 'react-native';
+import { AuthContext } from '../../../navigation/AuthContext';
+import React from 'react'
 
-//StartPages
 
 export default function Cool({ navigation }) {
+    const { isAuthenticated, setIsAuthenticated } = React.useContext(AuthContext);
+
+    const handleContinue = () => {
+        setIsAuthenticated(true);
+    }
+
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../../../assets/finalReg.png')} resizeMode="cover" style={styles.image}>
                 <Text style={styles.startText}>Поздравляем! Вы прошли регистрацию!</Text>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Основная')} style={styles.appButtonContainer}>
+                <TouchableOpacity onPress={handleContinue} style={styles.appButtonContainer}>
                     <Text style={styles.appButtonText}>Продолжить </Text>
                 </TouchableOpacity>
                 <StatusBar />
@@ -17,7 +24,6 @@ export default function Cool({ navigation }) {
         </View>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
